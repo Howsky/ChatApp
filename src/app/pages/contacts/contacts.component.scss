@@ -1,0 +1,37 @@
+@import 'variables';
+
+mat-list-item {
+  transition: all .2s;
+
+  &:hover {
+    background-color: $color-default;
+    cursor: pointer;
+  }
+}
+
+app-contact-item {
+  width: 100%;
+}
+
+.start-btn {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-end;
+}
+
+.checkbox {
+  margin-right: 1.5rem;
+}
+
+chatapp-contact-item {
+  width: 100%;
+}
+
+.contacts {
+  padding: 2rem;
+}

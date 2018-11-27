@@ -1,0 +1,38 @@
+@import 'variables';
+
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+      -ms-transform: $property;
+          transform: $property;
+}
+
+@mixin title() {
+  font-size: 2.6rem;
+  font-weight: 500;
+  margin: 3rem 0;
+  color: $color-white;
+}
+
+@mixin main() {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    margin-right: 2rem;
+  }
+}
+
+@mixin unselectable() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin photo() {
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

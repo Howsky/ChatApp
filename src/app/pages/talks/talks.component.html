@@ -1,0 +1,13 @@
+<chatapp-mobile-layout>
+  <chatapp-navbar [location]="'Talks'"></chatapp-navbar>
+<section class="talks">
+  <mat-list *ngFor="let room of rooms$ | async">
+  
+    <mat-list-item>
+      <chatapp-talk-item [room]="room"></chatapp-talk-item>
+    </mat-list-item>
+  
+  
+  </mat-list>
+</section>
+</chatapp-mobile-layout>

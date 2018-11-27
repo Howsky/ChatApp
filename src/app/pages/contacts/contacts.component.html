@@ -1,0 +1,23 @@
+<chatapp-mobile-layout>
+  <chatapp-navbar [location]="'Contacts'"></chatapp-navbar>
+
+  <section class="mat-typography contacts">
+    <mat-list>
+      <h3 mat-subheader>Active</h3>
+
+      <div class="contactItem" *ngFor="let contact of contacts">
+        <mat-list-item>
+          <chatapp-contact-item [contact]="contact" (selectedContact)="contactsController.onSelectedContact(contact)" (deselectedContact)="contactsController.onDeselectedContact(contact)"></chatapp-contact-item>
+        </mat-list-item>
+      </div>
+
+    </mat-list>
+  </section>
+
+  <div class="btnArea">
+      <button mat-fab class="start-btn" (click)="startTalking()" color="accent" *ngIf="contactsController.startBtnVisible">
+          <mat-icon class="mat-18">add</mat-icon>
+        </button>
+  </div>
+
+</chatapp-mobile-layout>

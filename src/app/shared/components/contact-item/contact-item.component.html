@@ -1,0 +1,5 @@
+<div class="contact-item" (click)="toggle()">
+  <img class="avatar" [src]="contact?.photoURL">
+  <span class="name">{{contact?.displayName}}</span>
+  <mat-icon class="material-icons" color="accent" *ngIf="selected">check</mat-icon>
+</div>

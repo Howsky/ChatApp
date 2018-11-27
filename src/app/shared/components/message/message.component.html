@@ -1,0 +1,15 @@
+<div class="message mat-typography">
+
+  <img class="author-photo" [src]="message.sender.photoURL">
+
+  <div class="message-main">
+    <p class="message-info">{{message.sender.displayName}}, {{ date | date: 'MMM d,  h:mm a' }}</p>
+
+    <div class="bubble">
+      <p class="message-content">
+        {{message.content}}
+      </p>
+    </div>
+  </div>
+
+</div>

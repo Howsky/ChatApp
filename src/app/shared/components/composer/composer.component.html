@@ -1,0 +1,8 @@
+<form class="composer mat-typography" [formGroup]="composerForm" (ngSubmit)="send()">
+  <mat-form-field>
+    <textarea matInput formControlName="message"></textarea>
+  </mat-form-field>
+  <button mat-mini-fab color="accent" type="submit">
+    <mat-icon class="mat-18">send</mat-icon>
+  </button>
+</form>

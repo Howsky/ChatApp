@@ -1,0 +1,22 @@
+<div class="user-profile" *ngIf="user | async as u">
+  <img class="avatar" [src]="u.photoURL" alt="AV">
+  <p class="name">{{u.displayName}}</p>
+</div>
+
+<nav class="nav">
+
+  <mat-list>
+    <h3 mat-subheader>Navigation</h3>
+
+    <mat-list-item *ngFor="let navLink of navLinks" (click)="goto(navLink.url)">
+      <mat-icon mat-list-icon class="i-contacts">{{navLink.icon}}</mat-icon>
+      <h4 mat-line>{{navLink.label}}</h4>
+    </mat-list-item>
+
+    <mat-list-item (click)="logout()">
+      <h4 mat-line>Logout</h4>
+    </mat-list-item>
+
+  </mat-list>
+
+</nav>

@@ -1,0 +1,16 @@
+<div class="talk-item">
+
+  <div class="talk-info">
+  <img [src]="pic" class="pic">
+
+  <span class="contact-names">
+    {{contacts | countUndisplayed : undisplayedContacts}}
+  </span>
+  </div>
+
+  <button mat-icon-button>
+    <mat-icon class="mat-18" (click)="gotoTalkRoom()">chevron_right</mat-icon>
+  </button>
+
+
+</div>

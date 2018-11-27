@@ -1,0 +1,11 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav role="navigation">
+    <chatapp-sidenav (close)="sidenav.toggle()" [navLinks]="navLinks" [user]="user"></chatapp-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content (swiperight)="sidenav.toggle()">
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,9 @@
+<chatapp-mobile-layout>
+  <chatapp-navbar [location]="'Talk Room'"></chatapp-navbar>
+
+  <div class="talk-content" >
+    <chatapp-message *ngFor="let message of messages$ | async" [message]="message"></chatapp-message>
+  </div>
+  
+  <chatapp-composer (mess)="send($event)"></chatapp-composer>
+</chatapp-mobile-layout>

@@ -1,0 +1,39 @@
+<section class="mat-typography">
+  <mat-card>
+
+    <mat-card-header>
+      <h1 class="reception">Signin to your account!</h1>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <form class="login-form" (ngSubmit)="login()" [formGroup]="loginForm" autocomplete="on">
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="email" placeholder="Email" value="" autocomplete="email" formControlName="email">
+          <mat-error *ngIf="loginForm.controls['email'].invalid">{{ getErrorMessage(loginForm.controls['email']) }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="password" placeholder="Password" value="" autocomplete="current-password" formControlName="password">
+          <mat-error *ngIf="loginForm.controls['password'].invalid">{{ getErrorMessage(loginForm.controls['password']) }}</mat-error>
+        </mat-form-field>
+
+        <button type="submit" #submitBtn style="display: none"></button>
+
+      </form>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <a type="button" class="pass-reminder">Forgot Password?</a>
+
+      <button mat-button type="button" color="default" (click)="submitBtn.click()">Login</button>
+    </mat-card-actions>
+
+    <mat-card-footer>
+      <button mat-button type="button" (click)="gotoRegistration()">Register</button>
+    </mat-card-footer>
+
+  </mat-card>
+</section>

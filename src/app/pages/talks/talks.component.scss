@@ -1,0 +1,18 @@
+@import 'variables';
+
+chatapp-talk-item {
+  width: 100%;
+}
+
+mat-list-item {
+  transition: all .2s;
+
+  &:hover {
+    background-color: $color-default;
+    cursor: pointer;
+  }
+}
+
+.talks {
+  padding: 2rem;
+}
