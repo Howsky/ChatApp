@@ -19,8 +19,8 @@ export class ContactsComponent implements OnInit, OnDestroy {
 
   constructor(
     private contactsService: ContactsService,
-    private authService: AuthService,
-    private contactsController: ContactsController,
+    // temporary
+    public contactsController: ContactsController,
     private talkService: TalkService,
     private router: Router
   ) {}
